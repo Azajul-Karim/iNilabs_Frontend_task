@@ -15,6 +15,13 @@
   overflow-x: hidden;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -317,41 +324,31 @@ nav .hamburger {
   margin-left: 100px;
 }
 
-.collaborate .collaborate_card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px;
+.collaborate_card {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
 }
-.collaborate .collaborate_card .card {
-  flex-basis: 30%;
+.collaborate_card .card {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   line-height: 1.5;
 }
-.collaborate .collaborate_card .card h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
 
 @media screen and (max-width: 768px) {
   .collaborate .collaborate_card {
-    flex-direction: column;
-  }
-
-  .collaborate .collaborate_card .card {
-    width: 100%;
-    margin-bottom: 20px;
+    grid-template-columns: 90%;
   }
   .collaborate .collaborate_text h1 {
-    font-size: 25px;
+    font-size: 28px;
     margin: 0 auto;
   }
   .collaborate .collaborate_card .card h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .collaborate .idea {
     display: none;
@@ -583,7 +580,6 @@ nav .hamburger {
   display: flex;
   align-items: center;
 }
-
 .profile p {
   margin-left: 10px;
   font-size: 16px;
